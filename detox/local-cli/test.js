@@ -165,11 +165,11 @@ function prepareJestArgs({ cliConfig, runnerArgs, runnerConfig, platform }) {
 
 async function resetLockFile({ platform }) {
   if (platform === 'ios') {
-    await DeviceRegistry.ios().reset();
+    await DeviceRegistry.forIOS().reset();
   }
 
   if (platform === 'android') {
-    await DeviceRegistry.android().reset();
+    await DeviceRegistry.forAndroid().reset();
   }
 }
 
